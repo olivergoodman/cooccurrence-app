@@ -1,2 +1,2 @@
 # cooccurrence-app
-Describes an demonstrates word cooccurrence.
+Describes and demonstrates word cooccurrence.
