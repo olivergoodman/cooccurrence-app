@@ -59,7 +59,7 @@ input[type="text"]:focus {
 	outline: none;
     padding: 8px;
     margin-left: 15px;
-    width: 150px;
+    width: 120px;
     border: 3px solid black;
     font-size: 18px;
     font-weight: bold;
@@ -70,7 +70,7 @@ input[type="text"]:focus {
 	transition: all ease 0.3s;
 }
 .to-right:hover {
-    box-shadow: inset 150px 0 0 0 black;
+    box-shadow: inset 120px 0 0 0 black;
     color: #fff0b3;
 }
 .to-right:active {
