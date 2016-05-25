@@ -1,3 +1,50 @@
-body {
-	background-color: #fff0ff;
+* {
+	background-color: #fff0b3;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 18px;
+}
+
+header {
+	text-align: center;
+}
+
+h1 {
+	font-size: 60px;
+	margin-bottom: -10px;
+}
+
+h3 {
+	font-size: 25px;
+}
+
+#search {
+	text-align: center;
+}
+
+p {
+	margin-left: 25px;
+	margin-right: 25px;
+}
+
+input[type="text"] {
+  font-family: sans-serif;
+  font-size: 18px;
+  appearance: none;
+  width: 200px;
+  box-shadow: none;
+  border-radius: none;
+  border: none;
+  border-bottom: solid 2px #c9c9c9;
+  transition: border 0.3s;
+}
+
+input[type="text"]:focus {
+  outline: none;
+  border-bottom: solid 2px black;
+}
+
+#search-but {
+	padding: 3px;
+	outline: none;
+	border-radius: 8px;
 }
