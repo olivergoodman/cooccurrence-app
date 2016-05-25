@@ -4,6 +4,11 @@
 	font-size: 18px;
 }
 
+body {
+	margin-left: 25px;
+	margin-right: 25px;
+}
+
 header {
 	text-align: center;
 }
@@ -18,7 +23,7 @@ h3 {
 }
 
 #search {
-	text-align: center;
+	text-align: left;
 	margin-top: 60px;
 }
 
@@ -33,11 +38,6 @@ h3 {
 }
 :-ms-input-placeholder {  
    color: black;  
-}
-
-p {
-	margin-left: 25px;
-	margin-right: 25px;
 }
 
 input[type="text"] {
@@ -75,5 +75,6 @@ input[type="text"]:focus {
 }
 .to-right:active {
 	position:relative;
-	top: 2px
+	top: 2px;
+	background-color: #595959;
 }
