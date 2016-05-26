@@ -5,8 +5,8 @@
 }
 
 body {
-	margin-left: 25px;
-	margin-right: 25px;
+	margin-left: 50px;
+	margin-right: 50px;
 }
 
 header {
@@ -76,5 +76,8 @@ input[type="text"]:focus {
 .to-right:active {
 	position:relative;
 	top: 2px;
-	background-color: #595959;
+}
+
+hr {
+	noshade: noshade;
 }
