@@ -8,11 +8,10 @@ app.debug = True
 def get_input_word():
 	if request.method == 'POST':
 		word = request.json['input_word']
-		print "got word" + word
 		if word == "":
 			return None,"Error: could not retrieve data"
 		else:
-			print "got the word"
+			print "got the word", word
 			return json.dumps({'success':True}), 200, {'ContentType':'application/json'}  
 
 @app.route('/')
