@@ -1,4 +1,4 @@
-from flask import Flask, send_from_directory
+from flask import Flask, send_from_directory, request, json
 
 app = Flask(__name__, static_url_path='/')
 app.debug = True
@@ -7,7 +7,7 @@ app.debug = True
 @app.route('/_get_input_word', methods = ['GET', 'POST'])
 def get_input_word():
 	if request.method == 'POST':
-		page_title = request.json['page_title']
+		word = request.json['input_word']
 		print "got word" + word
 		if word == "":
 			return None,"Error: could not retrieve data"
