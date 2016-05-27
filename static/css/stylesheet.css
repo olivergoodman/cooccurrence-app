@@ -52,7 +52,12 @@ input[type="text"] {
 
 input[type="text"]:focus {
 	outline: none;
-	border-color: #c2c2d6;
+	border-color: #b3b3cc;
+}
+
+#search {
+	text-align: center;
+	margin-top: 10px;
 }
 
 .to-right {
@@ -78,6 +83,26 @@ input[type="text"]:focus {
 	top: 2px;
 }
 
-hr {
-	noshade: noshade;
+#output-obama {
+	font-size: 25px;
+	/*font-style: italic;*/
+	color: #3366ff;
+	margin-top: 20px;
 }
+
+#output-trump {
+	font-size: 25px;
+	/*font-style: italic;*/
+	color: #ff4d4d;
+	margin-top: 20px;
+}
+
+.output-words {
+	font-style: italic;
+	font-weight: 700;
+	font-size: 25px;
+	position: inline;
+}
+
+
+

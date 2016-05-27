@@ -8,9 +8,11 @@ app.debug = True
 def get_input_word():
 	if request.method == 'POST':
 		word = request.json['input_word']
-		if word == "":
+		if word == None:
+			#do some process about not inputting a word
 			return None,"Error: could not retrieve data"
 		else:
+			#take word, process it
 			print "got the word", word
 			return json.dumps({'success':True}), 200, {'ContentType':'application/json'}  
 
