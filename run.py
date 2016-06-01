@@ -18,10 +18,8 @@ def get_input_word():
 			return None,"Error: could not retrieve data"
 		else:
 			#take word, process it
-			print "got the word:", word
 			o_cooccurrences = obama.findCooccurrence(word)
 			t_cooccurrences = trump.findCooccurrence(word)
-			print o_cooccurrences, t_cooccurrences
 			return json.dumps({'success':True, 'obama':o_cooccurrences, 'trump':t_cooccurrences}), 200, {'ContentType':'application/json'}
 
 @app.route('/')

@@ -24,9 +24,7 @@ $(document).ready(function() {
 		        		}
 		        		else {
 			        		$('#words-o').append(o_cooccurrences[i]+", ");
-			        	}
-			        }		
-			    }
+			        	}}}
 	        	if (t_cooccurrences[0] == "T") {
 	        		console.log("words-t empty");
 	        		$('#words-t').append("Word not in text. Try another word.");
@@ -38,10 +36,7 @@ $(document).ready(function() {
 		        		}
 		        		else {
 			        		$('#words-t').append(t_cooccurrences[i]+", ");
-			        	}
-			        }
-			    }
-	        	
+			        	}}}	
 	        },
 	        error: function(response) { 
 	        	console.log(response.status + ": could not pass data to server");  
