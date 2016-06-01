@@ -3,7 +3,7 @@ $(document).ready(function() {
 
 	$("#but-search").click(function(){
 		var input_word = document.getElementById("wordInput").value;
-		var data = {"input_word": input_word}
+		var data = {"input_word": input_word};
 
 		$.ajax({
 			type: 'POST',
@@ -12,10 +12,25 @@ $(document).ready(function() {
 			contentType: 'application/json;charset=UTF-8',
 			dataType : "json",
 			success: function(response) {
-	        	console.log(response);
-	        	console.log("Successfully passed data to server");
+	        	var o_cooccurrences = response.obama;
+	        	var t_cooccurrences = response.trump;
+	        	
+	        	
+	        	$('.output-words').text("");
+	        	for (var i=0; i<3; i++){
+	        		if (i == 2) {
+	        			$('#words-o').append(o_cooccurrences[i]);
+		        		$('#words-t').append(t_cooccurrences[i]);
+	        		}
+	        		else {
+		        		$('#words-o').append(o_cooccurrences[i]+", ");
+		        		$('#words-t').append(t_cooccurrences[i]+", ");
+		        	}
+	        	}
+	        	// console.log("obama: " + o_cooccurrences);
+	        	// console.log("trump: " + t_cooccurrences);
 	        },
-	        error: function(response) { //why still returning error status on successful request?
+	        error: function(response) { 
 	        	console.log(response.status + ": could not pass data to server");  
 	        }
 	    });	

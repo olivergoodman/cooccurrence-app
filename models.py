@@ -111,5 +111,3 @@ class CooccurrenceMatrix:
         for c in coocs:
             result.append((list(self.word_indices.keys())[list(self.word_indices.values()).index(c)]))
         return result
-
-        
