@@ -18,8 +18,8 @@ $(document).ready(function() {
 	        		$('#words-o').append("Word not in text. Try another word.");
 	        	}
 	        	else {
-	        		for (var i=0; i<3; i++){
-		        		if (i == 2) {
+	        		for (var i=0; i<o_cooccurrences.length; i++){
+		        		if (i == o_cooccurrences.length-1) {
 		        			$('#words-o').append(o_cooccurrences[i]);
 		        		}
 		        		else {
@@ -30,8 +30,8 @@ $(document).ready(function() {
 	        		$('#words-t').append("Word not in text. Try another word.");
 	        	}
 	        	else {
-	        		for (var i=0; i<3; i++){
-		        		if (i == 2) {
+	        		for (var i=0; i<t_cooccurrences.length; i++){
+		        		if (i == t_cooccurrences.length-1) {
 			        		$('#words-t').append(t_cooccurrences[i]);
 		        		}
 		        		else {
