@@ -1,5 +1,4 @@
 $(document).ready(function() {
-	console.log("PAGE LOADED")
 
 	$("#but-search").click(function(){
 		var input_word = document.getElementById("wordInput").value;
@@ -12,23 +11,37 @@ $(document).ready(function() {
 			contentType: 'application/json;charset=UTF-8',
 			dataType : "json",
 			success: function(response) {
+				$('.output-words').text("");
 	        	var o_cooccurrences = response.obama;
 	        	var t_cooccurrences = response.trump;
-	        	
-	        	
-	        	$('.output-words').text("");
-	        	for (var i=0; i<3; i++){
-	        		if (i == 2) {
-	        			$('#words-o').append(o_cooccurrences[i]);
-		        		$('#words-t').append(t_cooccurrences[i]);
-	        		}
-	        		else {
-		        		$('#words-o').append(o_cooccurrences[i]+", ");
-		        		$('#words-t').append(t_cooccurrences[i]+", ");
-		        	}
+	        	if (o_cooccurrences[0] == "T") {
+	        		$('#words-o').append("Word not in text. Try another word.");
 	        	}
-	        	// console.log("obama: " + o_cooccurrences);
-	        	// console.log("trump: " + t_cooccurrences);
+	        	else {
+	        		for (var i=0; i<3; i++){
+		        		if (i == 2) {
+		        			$('#words-o').append(o_cooccurrences[i]);
+		        		}
+		        		else {
+			        		$('#words-o').append(o_cooccurrences[i]+", ");
+			        	}
+			        }		
+			    }
+	        	if (t_cooccurrences[0] == "T") {
+	        		console.log("words-t empty");
+	        		$('#words-t').append("Word not in text. Try another word.");
+	        	}
+	        	else {
+	        		for (var i=0; i<3; i++){
+		        		if (i == 2) {
+			        		$('#words-t').append(t_cooccurrences[i]);
+		        		}
+		        		else {
+			        		$('#words-t').append(t_cooccurrences[i]+", ");
+			        	}
+			        }
+			    }
+	        	
 	        },
 	        error: function(response) { 
 	        	console.log(response.status + ": could not pass data to server");  
