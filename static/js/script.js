@@ -26,7 +26,6 @@ $(document).ready(function() {
 			        		$('#words-o').append(o_cooccurrences[i]+", ");
 			        	}}}
 	        	if (t_cooccurrences[0] == "T") {
-	        		console.log("words-t empty");
 	        		$('#words-t').append("Word not in text. Try another word.");
 	        	}
 	        	else {
