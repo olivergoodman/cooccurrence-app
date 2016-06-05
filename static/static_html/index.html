@@ -13,11 +13,12 @@
 			<h3>Oliver Goodman</h3>
 		</header>
 		
-		<p>Word cooccurrence can be a useful technique when analyzing bodies of text.</p>
+		<p>Word cooccurrence can be a useful technique when analyzing bodies of text. Studying which combinations of words frequently appear together has many important applications in natural language processing (NLP). In speech recognition, for example, word cooccurrence can be very helpful when trying to determine a certain sequence of words. In this project, I explored the use of word cooccurrence to take a broader look at the different types of language different people tend to gravitate towards. I compiled two corpuses of presidential candidate speeches, one of Barack Obama in 2008-2009 and another of Donald Trump in 2015-2016. </p>
 
-		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut eget lacinia urna. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla scelerisque quam nec arcu efficitur, eu ornare justo luctus. Nunc consequat dolor id ornare malesuada. Morbi libero justo, ullamcorper nec euismod eu, dignissim efficitur diam. Quisque elementum mauris id orci vulputate, sit amet vulputate est ultrices. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla porta faucibus turpis, eget posuere risus vulputate mollis. Maecenas tincidunt efficitur facilisis. Quisque laoreet elementum rutrum. Fusce non vehicula diam, dictum pellentesque felis. </p>
+		<p>To keep track of word cooccurrences, I first cleaned and organized the corpuses. I decided to remove all stop words from each corpus, although in different NLP studies they could be included to examine their significance in a specifc document. Using the <a href="http://www.nltk.org/">Natural Language Toolkit</a>, I kept track of both individual tokens and sentences in each corpus. For the purpose of this project, I considered each sentence as its own document. By examining each sentence, I compiled a cooccurrence matrix mapping the number of cooccurrences a given word had with other words within a document. Feel free to look at the specific implementation on my <a href="https://github.com/olivergoodman/cooccurrence-app">Github</a>!</p>
 
-		<p>Praesent turpis libero, lacinia non fringilla et, commodo in metus. Cras condimentum ligula quis rhoncus tempus. Sed sollicitudin risus quis sapien iaculis, eget elementum orci egestas. Pellentesque ultrices sed quam vitae tempor. Pellentesque et magna quis diam malesuada consectetur. Nullam pellentesque pretium tempus. Phasellus posuere justo libero, ac suscipit nibh fringilla at. Integer ornare dolor eu lacinia pellentesque. Vestibulum vehicula ante ut quam tempus sodales. Aliquam erat volutpat. Integer et nibh ac odio venenatis lobortis. Maecenas lobortis urna et erat finibus tincidunt. Nam convallis vestibulum leo, sed ornare dui mollis nec. Ut in posuere magna.</p>
+		<p>Search for any word below to see the top 3 cooccurrences found in Obama's speeches compared to Trump's. Enjoy!</p>
+
 		
 		<div id="search">
 			<input type="search" id="wordInput" placeholder="Input a word">
